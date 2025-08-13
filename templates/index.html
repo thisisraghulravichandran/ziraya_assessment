@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Compliance Checker</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📄 Document Compliance Checker</h1>
+            <p>AI-powered English writing guidelines compliance assessment</p>
+        </div>
+
+        <div class="main-content">
+            <div class="upload-section" id="uploadSection">
+                <h3>Upload Your Document</h3>
+                <p>Support for PDF and Word documents (max 16MB)</p>
+                
+                <div class="file-input-wrapper">
+                    <input type="file" id="fileInput" class="file-input" accept=".pdf,.docx,.doc">
+                    <button class="file-input-button">Choose File</button>
+                </div>
+                
+                <div class="upload-info">
+                    Drag and drop files here or click to browse
+                </div>
+                
+                <div id="selectedFile" class="selected-file" style="display: none;"></div>
+                
+                <button id="processButton" class="process-button" style="display: none;" disabled>
+                    Process Document
+                </button>
+            </div>
+
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Processing document... This may take a few moments.</p>
+            </div>
+
+            <div id="results" class="results">
+                <div id="complianceReport" class="compliance-report"></div>
+                <div id="modifiedPreview" class="modified-preview" style="display: none;"></div>
+                <div class="action-buttons">
+                    <button id="modifyButton" class="modify-button">
+                        🔧 Fix Compliance Issues
+                    </button>
+                    <a id="downloadButton" class="download-button" style="display: none;">
+                        📥 Download Modified Document
+                    </a>
+                </div>
+            </div>
+
+            <div id="alerts"></div>
+        </div>
+    </div>
+</body>
+</html>
